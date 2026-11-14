@@ -62,10 +62,11 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ onSelectEquipmen
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
-    setPanOffset({
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y
-    });
+    const maxPanX = 220 * zoomLevel;
+    const maxPanY = 160 * zoomLevel;
+    const nextX = Math.max(-maxPanX, Math.min(maxPanX, e.clientX - dragStart.x));
+    const nextY = Math.max(-maxPanY, Math.min(maxPanY, e.clientY - dragStart.y));
+    setPanOffset({ x: nextX, y: nextY });
   };
 
   const handleMouseUp = () => {
