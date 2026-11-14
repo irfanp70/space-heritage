@@ -1,12 +1,12 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import {
-  Sparkles,
-  ArrowLeftRight,
-  Info,
-  Camera,
-  Sliders,
-  ChevronLeft,
-  ChevronRight
+import { 
+  Sparkles, 
+  ArrowLeftRight, 
+  Info, 
+  Camera, 
+  Sliders, 
+  ChevronLeft, 
+  ChevronRight 
 } from 'lucide-react';
 import { GALLERY_ITEMS, GalleryItem } from '../data/galleryData';
 import { spaceAudio } from '../utils/audio';
@@ -19,6 +19,26 @@ export const BeforeAfterGallery: React.FC = () => {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const draggingRef = useRef<boolean>(false);
+  const preloadedImagesRef = useRef<HTMLImageElement[]>([]);
+
+  // Preload and decode all Before & After images into memory on mount
+  useEffect(() => {
+    const cache: HTMLImageElement[] = [];
+
+    GALLERY_ITEMS.forEach((item) => {
+      [item.before.imageUrl, item.after.imageUrl].forEach((src) => {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = src;
+        if (typeof img.decode === 'function') {
+          img.decode().catch(() => {});
+        }
+        cache.push(img);
+      });
+    });
+
+    preloadedImagesRef.current = cache;
+  }, []);
 
   const filteredItems = GALLERY_ITEMS.filter(
     (item) => selectedDestination === 'All' || item.destination === selectedDestination
@@ -221,6 +241,8 @@ export const BeforeAfterGallery: React.FC = () => {
           <img
             src={currentItem.after.imageUrl}
             alt={currentItem.after.caption}
+            loading="eager"
+            decoding="sync"
             draggable={false}
             onDragStart={(e) => e.preventDefault()}
             className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
@@ -248,6 +270,8 @@ export const BeforeAfterGallery: React.FC = () => {
             <img
               src={currentItem.before.imageUrl}
               alt={currentItem.before.caption}
+              loading="eager"
+              decoding="sync"
               draggable={false}
               onDragStart={(e) => e.preventDefault()}
               className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
