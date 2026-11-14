@@ -66,9 +66,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     historicalContext: 'Unlike rovers that can reposition to chase the wind, stationary landers depend on fortunate wind gusts. InSight recorded thousands of dust devils, but none passed close enough to clean its solar wings before mission end in December 2022.',
     nasaRefId: 'PIA25288 & PIA25287'
   },
-    historicalContext: 'Unlike rovers that can reposition to chase the wind, stationary landers depend on fortunate wind gusts. InSight recorded thousands of dust devils, but none passed close enough to clean its solar wings.',
-    nasaRefId: 'PIA22874 & PIA25287'
-  },
   {
     id: 'apollo11-tranquility-orbital',
     title: 'Apollo 11 Tranquility Base: 1969 Surface vs. LROC Orbital View',
