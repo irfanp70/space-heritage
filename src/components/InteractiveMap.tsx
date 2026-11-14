@@ -187,29 +187,44 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ onSelectEquipmen
             </div>
           </div>
 
-          {/* Interactive Planetary Surface & Markers */}
+{/* Interactive Planetary Surface & Markers */}
           <div 
-            className="absolute inset-0 cursor-grab active:cursor-grabbing overflow-hidden flex items-center justify-center"
+            className={`absolute inset-0 cursor-grab active:cursor-grabbing overflow-hidden transition-colors duration-700 bg-grid-pattern ${
+              activeBody === 'Moon' ? 'bg-[#0b0f19]' : 'bg-[#1a0a07]'
+            }`}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
           >
-            <div 
-              className="relative w-full h-full transition-transform duration-75 ease-out"
+            {/* Fixed Ambient Planetary Glow (Never shows blank edges while panning) */}
+            <div
+              className="absolute inset-0 pointer-events-none"
               style={{
-                transform: `scale(${zoomLevel}) translate(${panOffset.x / zoomLevel}px, ${panOffset.y / zoomLevel}px)`
+                background:
+                  activeBody === 'Moon'
+                    ? 'radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.1) 0%, rgba(15, 23, 42, 0.25) 60%, rgba(2, 6, 23, 0.85) 100%)'
+                    : 'radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.14) 0%, rgba(45, 19, 13, 0.3) 60%, rgba(15, 5, 3, 0.85) 100%)'
+              }}
+            />
+
+            {/* Draggable & Zoomable Coordinate Frame */}
+            <div 
+              className="relative w-full h-full origin-center transition-transform duration-75 ease-out"
+              style={{
+                transform: `translate(${panOffset.x}px, ${panOffset.y}px) scale(${zoomLevel})`
               }}
             >
-              {/* Planetary Surface Graphic (Moon or Mars) */}
-              <div className={`absolute inset-0 transition-all duration-700 ${
-                activeBody === 'Moon' 
-                  ? 'bg-[#0b0f19] bg-grid-pattern' 
-                  : 'bg-[#1a0a07] bg-grid-pattern'
-              }`}>
+              {/* Oversized Surface Tile so edges never clip when panned */}
+              <div className={`absolute -inset-[60%] pointer-events-none bg-grid-pattern opacity-60 ${
+                activeBody === 'Moon' ? 'bg-[#0b0f19]/60' : 'bg-[#1a0a07]/60'
+              }`} />
+
+              {/* Full-Viewport Coordinate & Topographical Layer */}
+              <div className="relative w-full h-full">
                 {/* 3D Celestial Globe Spherical Illumination */}
-                <div className={`absolute inset-6 rounded-3xl border opacity-30 pointer-events-none ${
-                  activeBody === 'Moon' ? 'border-cyan-400/30' : 'border-orange-500/30'
+                <div className={`absolute top-16 bottom-12 left-5 right-5 rounded-2xl border opacity-30 pointer-events-none ${
+                  activeBody === 'Moon' ? 'border-cyan-400/40' : 'border-orange-500/40'
                 }`}></div>
 
                 {/* Simulated Geologic Surface Topography Details */}
