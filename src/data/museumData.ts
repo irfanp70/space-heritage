@@ -528,7 +528,7 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
     audioQuote: "For fifteen years I raced across the Meridiani plains. I was only built to survive ninety days, but together we ran a full marathon and climbed the walls of giant craters. On Sol 5111, the great storm swallowed the Sun. My battery was low, and it was getting dark... but our journey was complete.",
   },
 
-  // 11. InSight Lander (Mars)
+ // 11. InSight Lander (Mars)
   {
     id: 'insight-lander',
     name: 'Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight)',
@@ -539,8 +539,8 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
     launchYear: 2018,
     landingYear: 2018,
     lastContact: 'December 15, 2022 (Sol 1445)',
-    imageUrl: 'https://images-assets.nasa.gov/image/PIA22874/PIA22874~medium.jpg',
-    imageCredit: 'NASA / JPL-Caltech / CNES / IPGP (PIA22874)',
+    imageUrl: '/Before%20Insight.jpg',
+    imageCredit: 'NASA / JPL-Caltech (PIA25288)',
     nasaCatalogId: '2018-042A (InSight Lander)',
     coordinates: {
       latitude: '4.5024° N',
