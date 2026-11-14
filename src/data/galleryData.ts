@@ -48,21 +48,24 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'insight-dust-choke',
     title: 'InSight Lander: Pristine Landing vs. Terminal Dust',
     destination: 'Mars',
-    era: '2018 – 2022',
+    era: 'Dec 10, 2018 – Apr 24, 2022',
     mission: 'InSight Mars Geophysical Lander',
-    description: 'InSight\'s Instrument Context Camera capturing the pristine white instrument deck in 2018 versus the thick reddish-gray shroud of dust that ultimately silenced its twin solar arrays in 2022.',
+    description: 'InSight\'s Instrument Deployment Camera capturing its pristine solar array on Sol 14 (December 10, 2018) versus the thick blanket of Martian dust from the exact same camera angle on Sol 1211 (April 24, 2022).',
     before: {
-      imageUrl: 'https://images-assets.nasa.gov/image/PIA22874/PIA22874~medium.jpg',
-      caption: 'InSight immediately after landing on Elysium Planitia, with clean solar panels producing over 4,500 watt-hours per sol.',
-      year: 'December 2018 (Sol 10)',
-      credit: 'NASA / JPL-Caltech (PIA22874)'
+      imageUrl: '/Before%20Insight.jpg',
+      caption: 'InSight\'s Instrument Deployment Camera view of its pristine, dark solar array on Elysium Planitia shortly after deployment, generating over 4,500 watt-hours per sol.',
+      year: 'December 10, 2018 (Sol 14)',
+      credit: 'NASA / JPL-Caltech (PIA25288)'
     },
     after: {
-      imageUrl: 'https://images-assets.nasa.gov/image/PIA25287/PIA25287~medium.jpg',
-      caption: 'InSight selfie taken in April 2022, revealing extreme dust accumulation that reduced power output by over 90%, leading to terminal power loss.',
-      year: 'April 2022 (Sol 1211)',
+      imageUrl: '/After%20Insight.jpg',
+      caption: 'InSight photographed from the exact same robotic arm camera angle over three Earth years later, completely blanketed in Martian dust that cut power output below 10%.',
+      year: 'April 24, 2022 (Sol 1211)',
       credit: 'NASA / JPL-Caltech (PIA25287)'
     },
+    historicalContext: 'Unlike rovers that can reposition to chase the wind, stationary landers depend on fortunate wind gusts. InSight recorded thousands of dust devils, but none passed close enough to clean its solar wings before mission end in December 2022.',
+    nasaRefId: 'PIA25288 & PIA25287'
+  },
     historicalContext: 'Unlike rovers that can reposition to chase the wind, stationary landers depend on fortunate wind gusts. InSight recorded thousands of dust devils, but none passed close enough to clean its solar wings.',
     nasaRefId: 'PIA22874 & PIA25287'
   },
