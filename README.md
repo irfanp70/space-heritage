@@ -35,7 +35,7 @@ An interactive, scientifically verified digital space museum created for the **N
 
 3. **🎙️ "If This Machine Could Talk":**
    - Emotional first-person monologues told from the machine's own voice.
-   - Dual Language Support: **English** and **Malayalam (മലയാളം)**.
+   - Machine Voice Narration: Immersive English storytelling powered by Web Speech API speech synthesis.
    - Integrated Web Speech API narrator with an animated audio spectrum visualizer.
 
 4. **🌓 Before-and-After Historical Gallery:**

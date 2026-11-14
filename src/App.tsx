@@ -129,7 +129,7 @@ export default function App() {
           onSelectEquipmentFromMap={handleSelectFromMap}
         />
 
-        {/* 3. If This Machine Could Talk (English & Malayalam) */}
+        {/* 3. If This Machine Could Talk */}
         <StorytellingSection 
           initialMachineId={targetMachineForVoice}
         />

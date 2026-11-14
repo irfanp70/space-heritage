@@ -160,42 +160,34 @@ class SpaceAudioEngine {
 
 export const spaceAudio = new SpaceAudioEngine();
 
-// Speech synthesis narrator for "If This Machine Could Talk"
-export function speakNarration(text: string, lang: 'en' | 'ml', onEnd?: () => void) {
+// Speech synthesis narrator for "If This Machine Could Talk" (Always English)
+export function speakNarration(text: string, onEndOrLang?: string | (() => void), onEnd?: () => void) {
+  const callback = typeof onEndOrLang === 'function' ? onEndOrLang : onEnd;
   if (!('speechSynthesis' in window)) {
-    if (onEnd) onEnd();
+    if (callback) callback();
     return;
   }
 
   window.speechSynthesis.cancel(); // Stop any previous speech
 
   const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = lang === 'ml' ? 0.9 : 0.92;
+  utterance.rate = 0.92;
   utterance.pitch = 0.95;
+  utterance.lang = 'en-US';
 
-  if (lang === 'ml') {
-    utterance.lang = 'ml-IN';
-  } else {
-    utterance.lang = 'en-US';
-  }
-
-  // Find optimal voice if available
+  // Always use an English voice
   const voices = window.speechSynthesis.getVoices();
   if (voices.length > 0) {
-    if (lang === 'ml') {
-      const mlVoice = voices.find(v => v.lang.startsWith('ml'));
-      if (mlVoice) utterance.voice = mlVoice;
-    } else {
-      const enVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('David')));
-      if (enVoice) utterance.voice = enVoice;
-    }
+    const enVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('David') || v.name.includes('Daniel') || v.name.includes('US') || v.name.includes('English')))
+      || voices.find(v => v.lang.startsWith('en'));
+    if (enVoice) utterance.voice = enVoice;
   }
 
   utterance.onend = () => {
-    if (onEnd) onEnd();
+    if (callback) callback();
   };
   utterance.onerror = () => {
-    if (onEnd) onEnd();
+    if (callback) callback();
   };
 
   window.speechSynthesis.speak(utterance);

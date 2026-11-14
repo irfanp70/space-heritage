@@ -3,12 +3,8 @@ import {
   Radio, 
   Volume2, 
   VolumeX, 
-  Globe2, 
-  Languages, 
-  Sparkles, 
+  Headphones,
   Heart, 
-  MapPin, 
-  Clock, 
   ChevronRight,
   Quote
 } from 'lucide-react';
@@ -28,9 +24,7 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
     return MACHINE_STORIES[0];
   });
 
-  const [language, setLanguage] = useState<'en' | 'ml'>('en');
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [speakingParagraphIndex, setSpeakingParagraphIndex] = useState<number | null>(null);
 
   // Sync external selection when user clicks "Listen to Voice" on an artifact
   React.useEffect(() => {
@@ -40,42 +34,30 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
         setSelectedMachine(match);
         stopNarration();
         setIsSpeaking(false);
-        setSpeakingParagraphIndex(null);
       }
     }
   }, [initialMachineId]);
 
-  const currentContent = language === 'en' ? selectedMachine.english : selectedMachine.malayalam;
+  const currentContent = selectedMachine.english;
 
   const handleSelectMachine = (machine: MachineStory) => {
     spaceAudio.playTelemetryPing();
     stopNarration();
     setIsSpeaking(false);
-    setSpeakingParagraphIndex(null);
     setSelectedMachine(machine);
-  };
-
-  const handleLanguageToggle = (lang: 'en' | 'ml') => {
-    spaceAudio.playClick();
-    stopNarration();
-    setIsSpeaking(false);
-    setSpeakingParagraphIndex(null);
-    setLanguage(lang);
   };
 
   const handlePlayFullStory = () => {
     if (isSpeaking) {
       stopNarration();
       setIsSpeaking(false);
-      setSpeakingParagraphIndex(null);
     } else {
       spaceAudio.playTelemetryPing();
       setIsSpeaking(true);
-      // Combine title and paragraphs into full spoken text
+      // Combine title and paragraphs into full spoken English text
       const fullText = `${currentContent.title}. ${currentContent.monologue.join(' ')}`;
-      speakNarration(fullText, language, () => {
+      speakNarration(fullText, () => {
         setIsSpeaking(false);
-        setSpeakingParagraphIndex(null);
       });
     }
   };
@@ -96,36 +78,15 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
             IF THIS MACHINE <span className="text-cyan-400">COULD TALK</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mt-2 text-sm sm:text-base">
-            First-person narratives told from the perspective of the rovers and landers themselves. Simple, emotional, and scientifically accurate transmissions available in both English and Malayalam.
+            First-person narratives told from the perspective of the rovers and landers themselves. Simple, emotional, and scientifically accurate transmissions told from the machine's voice.
           </p>
         </div>
 
-        {/* Dual Language Switcher */}
-        <div className="flex items-center gap-2 bg-slate-900/90 p-1.5 rounded-xl border border-white/10 shadow-xl">
-          <div className="flex items-center gap-1.5 px-2 text-slate-400 text-xs font-mono">
-            <Languages className="w-4 h-4 text-cyan-400" />
-            <span className="hidden sm:inline">LANGUAGE:</span>
-          </div>
-          <button
-            onClick={() => handleLanguageToggle('en')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all ${
-              language === 'en'
-                ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/30'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800'
-            }`}
-          >
-            ENGLISH
-          </button>
-          <button
-            onClick={() => handleLanguageToggle('ml')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold font-['Noto_Sans_Malayalam'] transition-all ${
-              language === 'ml'
-                ? 'bg-amber-400 text-slate-950 shadow-md shadow-amber-400/30'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800'
-            }`}
-          >
-            മലയാളം (MALAYALAM)
-          </button>
+        {/* Voice Synthesis Status Badge */}
+        <div className="flex items-center gap-2.5 bg-slate-900/90 px-4 py-2 rounded-xl border border-white/10 shadow-xl">
+          <Headphones className="w-4 h-4 text-cyan-400" />
+          <span className="text-xs font-mono text-cyan-300">ENGLISH NARRATION ENABLED</span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         </div>
       </div>
 
@@ -160,7 +121,6 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
                       className="w-full h-full object-cover"
                       loading="lazy"
                       onError={(e) => {
-                        // Fallback to placeholder styling
                         (e.currentTarget as HTMLElement).style.display = 'none';
                       }}
                     />
@@ -232,7 +192,7 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
             <div className="my-4 p-3 rounded-xl bg-slate-950/70 border border-cyan-500/30 flex items-center justify-between">
               <span className="text-[11px] font-mono text-cyan-400 flex items-center gap-2">
                 <Radio className="w-3.5 h-3.5 animate-pulse" />
-                TRANSMITTING SPEECH SYNTHESIS ({language.toUpperCase()})
+                TRANSMITTING ENGLISH SPEECH SYNTHESIS
               </span>
               <div className="flex items-end gap-1 h-4">
                 {[4, 12, 8, 16, 6, 14, 10, 16, 8, 12, 4].map((h, i) => (
@@ -255,9 +215,7 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
             {/* Story Title */}
             <div className="relative">
               <Quote className="absolute -top-3 -left-3 w-8 h-8 text-cyan-500/20 -z-0" />
-              <h4 className={`text-xl sm:text-2xl font-bold text-cyan-300 relative z-10 ${
-                language === 'ml' ? "font-['Noto_Sans_Malayalam'] leading-relaxed" : "font-['Orbitron']"
-              }`}>
+              <h4 className="text-xl sm:text-2xl font-bold text-cyan-300 relative z-10 font-['Orbitron']">
                 "{currentContent.title}"
               </h4>
             </div>
@@ -267,9 +225,7 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
               {currentContent.monologue.map((para, index) => (
                 <p 
                   key={index} 
-                  className={`transition-colors ${
-                    language === 'ml' ? "font-['Noto_Sans_Malayalam'] leading-loose" : ""
-                  }`}
+                  className="transition-colors"
                 >
                   {para}
                 </p>
@@ -283,9 +239,7 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
                 <Heart className="w-3.5 h-3.5 text-cyan-400" />
                 <span>EPILOGUE / ETERNAL MEMORY</span>
               </div>
-              <p className={`italic text-slate-300 text-sm sm:text-base font-serif ${
-                language === 'ml' ? "font-['Noto_Sans_Malayalam'] font-normal not-italic" : ""
-              }`}>
+              <p className="italic text-slate-300 text-sm sm:text-base font-serif">
                 "{currentContent.closingThought}"
               </p>
             </div>

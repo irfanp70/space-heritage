@@ -117,7 +117,7 @@ export const MuseumSection: React.FC<MuseumSectionProps> = ({
       setIsPlayingAudio(false);
     } else {
       setIsPlayingAudio(true);
-      speakNarration(text, 'en', () => {
+      speakNarration(text, () => {
         setIsPlayingAudio(false);
       });
     }
@@ -405,7 +405,7 @@ export const MuseumSection: React.FC<MuseumSectionProps> = ({
                         }}
                         className="text-xs font-mono text-slate-400 hover:text-cyan-300 underline underline-offset-4"
                       >
-                        Open Full Story & Malayalam &rarr;
+                        Open Full Machine Story &rarr;
                       </button>
                     )}
                   </div>

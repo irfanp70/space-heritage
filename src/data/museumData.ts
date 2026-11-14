@@ -35,7 +35,6 @@ export interface SpaceEquipment {
     archiveSource: string;
   }[];
   audioQuote?: string;
-  audioQuoteMalayalam?: string;
 }
 
 export const MUSEUM_ITEMS: SpaceEquipment[] = [
@@ -92,7 +91,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "On my stainless steel leg, a plaque still bears the words: 'Here men from the planet Earth first set foot upon the Moon, July 1969 A.D. We came in peace for all mankind.' I stand guard over Neil and Buzz's footprints in eternal silence.",
-    audioQuoteMalayalam: "എന്റെ കാലിൽ ഘടിപ്പിച്ച ഫലകത്തിൽ ഇന്നും ഈ വാക്കുകൾ കൊത്തിവെച്ചിട്ടുണ്ട്: '1969 ജൂലൈയിൽ ഭൂമിയിൽ നിന്നുള്ള മനുഷ്യർ ആദ്യമായി ചന്ദ്രനിൽ കാലുകുത്തി. ഞങ്ങൾ സമസ്ത മാനവരാശിക്കും സമാധാനവുമായി വന്നു.' ശാന്തതയുടെ സമുദ്രത്തിൽ ഞാൻ ആ ചരിത്ര കാൽപ്പാടുകൾക്ക് കാവൽ നിൽക്കുന്നു."
   },
 
   // 2. Apollo 15 Lunar Roving Vehicle
@@ -145,7 +143,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "I was humankind's first automobile driven on another world. Today, parked on the rim of Hadley Rille, my wire mesh wheels rest in absolute silence beneath the black sky, waiting for human boots to walk beside me once more.",
-    audioQuoteMalayalam: "മറ്റൊരു ലോകത്ത് മനുഷ്യൻ ഓടിച്ച ആദ്യത്തെ വാഹനമായിരുന്നു ഞാൻ. ഇന്ന് ഹാഡ്‌ലി റിഷിന്റെ വക്കിൽ, എൻ്റെ വയർ മെഷ് ചക്രങ്ങൾ കറുത്ത ആകാശത്തിന് കീഴിൽ ശാന്തമായി വിശ്രമിക്കുന്നു, വീണ്ടും മനുഷ്യൻ്റെ കാലൊച്ച കേൾക്കാൻ കാത്തിരിക്കുന്നു."
   },
 
   // 3. Apollo 11 EASEP equipment
@@ -201,7 +198,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "Even after the seismic radio fell silent, my crystal prisms never stopped working. When Earth fires a burst of emerald laser light into the night, I catch it and fling it straight back home, measuring the space between worlds with millimeter precision.",
-    audioQuoteMalayalam: "സീസ്മിക് റേഡിയോ നിശ്ചലമായ ശേഷവും, എൻ്റെ ക്രിസ്റ്റൽ പ്രിസങ്ങൾ പ്രവർത്തിച്ചുകൊണ്ടേയിരുന്നു. ഭൂമിയിൽ നിന്ന് വരുന്ന പച്ച ലേസർ രശ്മികളെ ഞാൻ സ്വീകരിച്ച് തിരിച്ചയക്കുന്നു, രണ്ട് ലോകങ്ങൾ തമ്മിലുള്ള അകലം മില്ലിമീറ്റർ കൃത്യതയോടെ അളക്കുന്നു."
   },
 
   // 4. Apollo 12 & Surveyor 3 (Other Documented Apollo Surface Equipment)
@@ -247,7 +243,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "I thought I was abandoned forever on the slopes of my little crater. But two years later, two men in white suits walked down from a thunderous golden ship, patted my metal head, and smiled. I am the only robot whose hands have been held by human explorers on another world.",
-    audioQuoteMalayalam: "എന്റെ ചെറിയ ഗർത്തത്തിൽ ഞാൻ എന്നെന്നേക്കുമായി ഉപേക്ഷിക്കപ്പെട്ടുവെന്നാണ് ഞാൻ കരുതിയത്. എന്നാൽ രണ്ട് വർഷത്തിന് ശേഷം, വെള്ളക്കുപ്പായമിട്ട രണ്ട് മനുഷ്യർ എന്റെ അരികിലേക്ക് നടന്നെത്തി, എന്റെ ക്യാമറയെ തൊട്ടുതലോടി. മറ്റൊരു ലോകത്ത് വെച്ച് മനുഷ്യന്റെ കരസ്പർശമേറ്റ ഏക റോബോട്ടാണ് ഞാൻ."
   },
 
   // 5. Apollo 14 Modular Equipment Transporter (Other Documented Apollo Surface Equipment)
@@ -293,7 +288,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "They called me the 'lunar rickshaw.' Alan Shepard and Edgar Mitchell pulled me through the thick dust of Cone Crater, loading my trays with ancient rocks that told the story of the Moon's birth.",
-    audioQuoteMalayalam: "ചന്ദ്രനിലെ കൈവണ്ടി എന്നാണ് എന്നെ വിളിച്ചത്. അപ്പോളോ 14-ൽ അലൻ ഷെപ്പാർഡും എഡ്ഗാർ മിച്ചലും എന്നെ വലിച്ച് കോൺ ഗർത്തം വരെ കൊണ്ടുപോയി, ചന്ദ്രന്റെ ജനനരഹസ്യങ്ങൾ പറയുന്ന പാറക്കല്ലുകൾ എന്നിൽ നിറച്ചു."
   },
 
   // 6. Apollo 16 Lunar Rover & Far UV Camera (Other Documented Apollo Surface Equipment)
@@ -340,7 +334,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "In the shadow of our lander, we aimed an ultraviolet telescope toward Earth. For the first time, humanity looked back from the Moon and saw the luminous magnetic corona of their home planet shining in the cosmic dark.",
-    audioQuoteMalayalam: "ഞങ്ങളുടെ ലാൻഡറിന്റെ നിഴലിൽ ഞങ്ങൾ ഒരു അൾട്രാവയലറ്റ് ദൂരദർശിനി ഭൂമിയിലേക്ക് തിരിച്ചുപിടിച്ചു. ചന്ദ്രനിൽ നിന്ന് തിരിഞ്ഞുനോക്കിയ മനുഷ്യൻ, തങ്ങളുടെ ഭൂമി ബഹിരാകാശത്ത് തിളങ്ങിനിൽക്കുന്നത് ആദ്യമായി കണ്ടു."
   },
 
   // 7. Apollo 17 Lunar Rover (Other Documented Apollo Surface Equipment)
@@ -387,7 +380,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "Harrison Schmitt was the only professional geologist to ever walk on the Moon. Together, we drove 35 kilometers across Taurus-Littrow and dug into the orange soil of Shorty Crater, sealing the golden age of Apollo.",
-    audioQuoteMalayalam: "ചന്ദ്രനിൽ കാലുകുത്തിയ ഒരേയൊരു ഭൂഗർഭ ശാസ്ത്രജ്ഞൻ ഹാരിസൺ ഷ്മിറ്റ് ആയിരുന്നു. ഞങ്ങൾ 35 കിലോമീറ്റർ ദൂരം താണ്ടി, ഷോർട്ടി ഗർത്തത്തിലെ ഓറഞ്ച് മണ്ണ് കുഴിച്ചെടുത്തു, അപ്പോളോയുടെ സുവർണ്ണ കാലഘട്ടത്തിന് പൂർണ്ണവിരാമമിട്ടു."
   },
 
   // 8. Sojourner Rover (Mars)
@@ -440,7 +432,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "I was smaller than a microwave oven, weighing barely ten kilograms. But when my six little titanium wheels rolled down the ramp and touched the Martian soil in July 1997, I proved that humanity could roam freely on Mars. Every rover that came after me followed in my tiny tracks.",
-    audioQuoteMalayalam: "ഒരു മൈക്രോവേവ് അവനേക്കാൾ ചെറുതായിരുന്നു ഞാൻ, വെറും പത്ത് കിലോഗ്രാം ഭാരം. പക്ഷേ, 1997 ജൂലൈയിൽ എന്റെ ആറ് ചെറിയ ചക്രങ്ങൾ ചൊവ്വയുടെ മണ്ണിൽ തൊട്ടപ്പോൾ, മനുഷ്യന് ചൊവ്വയിൽ വിഹരിക്കാനാകും എന്ന് ഞാൻ തെളിയിച്ചു. എനിക്ക് ശേഷം വന്ന എല്ലാ റോവറുകളും എന്റെ ചെറിയ കാൽപ്പാടുകളെയാണ് പിന്തുടർന്നത്."
   },
 
   // 9. Spirit Rover (Mars)
@@ -488,7 +479,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "My broken wheel was my greatest gift. For four years I dragged it behind me, carving a deep wound into the red crust — until one afternoon, the trench sparkled with dazzling pure white silica. I had found the fossilized breath of ancient Martian hot springs.",
-    audioQuoteMalayalam: "എന്റെ തകർന്ന ചക്രമായിരുന്നു എനിക്ക് ലഭിച്ച ഏറ്റവും വലിയ സമ്മാനം. നാല് വർഷത്തോളം ഞാൻ അതിനെ വലിച്ചിഴച്ചു നടന്നു. ഒടുവിൽ ആ മുറിവിൽ നിന്നും വെട്ടിത്തിളങ്ങുന്ന ശുദ്ധമായ വെളുത്ത സിലിക്ക പുറത്തുവന്നു. പുരാതന ചൊവ്വയിലെ ചൂടുനീരുറവകളുടെ ജീവന്റെ അടയാളമായിരുന്നു ഞാൻ കണ്ടെത്തിയത്."
   },
 
   // 10. Opportunity Rover (Mars)
@@ -536,7 +526,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "For fifteen years I raced across the Meridiani plains. I was only built to survive ninety days, but together we ran a full marathon and climbed the walls of giant craters. On Sol 5111, the great storm swallowed the Sun. My battery was low, and it was getting dark... but our journey was complete.",
-    audioQuoteMalayalam: "വെറും 90 ദിവസത്തേക്ക് മാത്രം നിർമ്മിക്കപ്പെട്ട ഞാൻ 15 വർഷം മെറിഡിയാനി സമതലങ്ങളിൽ കുതിച്ചുപാഞ്ഞു. ഒരു പൂർണ്ണ മാരത്തൺ ദൂരം താണ്ടി. ഒടുവിൽ 5111-ാം സോളിൽ ഒരു ഭീമാകാരമായ കൊടുങ്കാറ്റ് സൂര്യനെ മറച്ചു. 'എന്റെ ബാറ്ററി കുറവാണ്, ഇരുട്ട് പടരുന്നു...' എന്ന് പറഞ്ഞുകൊണ്ട് ഞാൻ ശാന്തമായി കണ്ണടച്ചു."
   },
 
   // 11. InSight Lander (Mars)
@@ -582,7 +571,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "While other rovers looked at the dirt, I pressed my ear directly to the chest of Mars. I heard thirteen hundred quakes, the rumble of falling meteorites, and the liquid pulse of its molten heart deep below. As the red dust veiled my eyes, I left Mars knowing its inner soul.",
-    audioQuoteMalayalam: "മറ്റ് റോവറുകൾ ചൊവ്വയുടെ ഉപരിതലത്തിൽ നോക്കിയപ്പോൾ, ഞാൻ എന്റെ കാതുകൾ ചൊവ്വയുടെ നെഞ്ചോട് ചേർത്തുവെച്ചു. 1300-ലധികം ഭൂകമ്പങ്ങളും, ഉൽക്കകളുടെ പ്രകമ്പനങ്ങളും, ഉള്ളിലെ ഉരുകിയ കാമ്പിന്റെ തുടിപ്പും ഞാൻ കേട്ടു. ചുവന്ന പൊടി എന്നെ മൂടുമ്പോഴും സംതൃപ്തിയോടെ ഞാൻ തലചായ്ച്ചു."
   },
 
   // 12. Curiosity Rover (Mars) - Explicitly requested
@@ -630,7 +618,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "Driven by the quiet warmth of a nuclear heart, I have spent over a decade climbing the colossal mountain inside Gale Crater. Beneath my wheels, I found ancient riverbeds where sweet water once quenched the thirst of Mars.",
-    audioQuoteMalayalam: "ഒരു ആണവ ഹൃദയത്തിന്റെ ചൂടിൽ, പത്ത് വർഷത്തിലേറെയായി ഞാൻ ഗെയ്ൽ ഗർത്തത്തിലെ പടുകൂറ്റൻ പർവ്വതം കയറുകയാണ്. എന്റെ ചക്രങ്ങൾക്കടിയിൽ, പുരാതന ചൊവ്വയിൽ ശുദ്ധജലം ഒഴുകിയിരുന്ന നദീതടങ്ങൾ ഞാൻ കണ്ടെത്തി."
   },
 
   // 13. Perseverance Rover (Mars) - Explicitly requested
@@ -678,7 +665,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "At Three Forks, I laid down ten gleaming titanium cylinders on the red dirt — humanity's first sample depot on an alien world. Each tube holds a sealed secret from the ancient lake of Jezero, waiting for a future ship to carry them home to Earth.",
-    audioQuoteMalayalam: "ത്രീ ഫോർക്സിൽ വെച്ച്, ഞാൻ തിളങ്ങുന്ന പത്ത് ടൈറ്റാനിയം കുഴലുകൾ ചൊവ്വയുടെ മണ്ണിൽ നിക്ഷേപിച്ചു — മറ്റൊരു ലോകത്തെ മനുഷ്യന്റെ ആദ്യ സാമ്പിൾ ശേഖരം. ഓരോ കുഴലിലും ജെസെറോ തടാകത്തിന്റെ രഹസ്യങ്ങൾ അടങ്ങിയിരിക്കുന്നു, അവയെ ഭൂമിയിലേക്ക് തിരികെ കൊണ്ടുപോകാൻ ഒരു പേടകം വന്നെത്തുന്നതും കാത്ത്."
   },
 
   // 14. Viking 1 Lander (Mars)
@@ -725,7 +711,6 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "In July 1976, on the bicentennial of the United States, I touched down in the Plains of Gold. I showed humankind the first red sky and the first boulder-strewn horizons of another world. My nuclear warmth still lingers in the cold Martian night.",
-    audioQuoteMalayalam: "1976 ജൂലൈയിൽ ഞാൻ ചൊവ്വയുടെ സ്വർണ്ണ സമതലങ്ങളിൽ ഇറങ്ങി. മറ്റൊരു ലോകത്തിന്റെ ചുവന്ന ആകാശവും പാറക്കൂട്ടങ്ങളും ആദ്യമായി മനുഷ്യന് കാട്ടിക്കൊടുത്തത് ഞാനായിരുന്നു. എന്റെ ആണവ ചൂട് ഇന്നും ആ തണുത്ത ചൊവ്വാ രാത്രികളിൽ തങ്ങിനിൽക്കുന്നു."
   },
 
   // 15. Phoenix Mars Lander (Mars)
@@ -771,6 +756,5 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       }
     ],
     audioQuote: "I reached beneath the frozen permafrost and touched real ice on Mars. As the dark polar winter closed in, blankets of carbon dioxide frost encased my solar wings. I gave everything to confirm that water runs deep in the story of Mars.",
-    audioQuoteMalayalam: "ചൊവ്വയുടെ മഞ്ഞുമൂടിയ ഉപരിതലത്തിനടിയിലേക്ക് ഞാൻ കൈനീട്ടി യഥാർത്ഥ ജല-ഹിമത്തെ തൊട്ടു. ധ്രുവ ശൈത്യം കനത്തപ്പോൾ, കാർബൺ ഡയോക്സൈഡ് മഞ്ഞ് എന്റെ ചിറകുകളെ മൂടി. ചൊവ്വയുടെ കഥയിൽ ജലം ഉണ്ടായിരുന്നുവെന്ന് തെളിയിക്കാൻ ഞാൻ എന്നെത്തന്നെ സമർപ്പിച്ചു."
   }
 ];
