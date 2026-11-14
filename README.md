@@ -14,7 +14,7 @@ An interactive, scientifically verified digital space museum created for the **N
    - Searchable, filterable catalog of historical lunar and Martian hardware:
      - **Apollo Lunar Roving Vehicle (LRV-001, 002, 003)** (Apollo 15, 16, 17)
      - **Apollo 11 Lunar Module Descent Stage ("Eagle")**
-     - **Apollo 11 ALSEP & Laser Retroreflector (LRRR)**
+     - **Apollo 11 Early Apollo Scientific Experiments Package (EASEP & LRRR)**
      - **Surveyor 3 & Apollo 12 Astronaut Inspection**
      - **Apollo 14 Modular Equipment Transporter (MET)**
      - **Apollo 16 LRV & Far UV Astronomical Camera**
@@ -55,7 +55,7 @@ An interactive, scientifically verified digital space museum created for the **N
    - Client-side Canvas **Download PNG**, **Copy Link**, and native Web Share API trigger.
 
 8. **📡 NASA Space Updates 2026:**
-   - Categorized by Active (Perseverance, Curiosity, CLPS), Planned (Artemis II, Artemis III, Lunar Trailblazer), and Completed legacy missions.
+   - Categorized by Active (Perseverance, Curiosity, CLPS), Planned (Artemis III 2027 LEO demo, Artemis IV 2028 crewed south pole landing), and Completed (Artemis II crewed lunar flyby in April 2026, Lunar Trailblazer concluded July 31, 2025, and InSight legacy).
 
 9. **⏳ Exploration Timeline:**
    - Visual chronological timeline from 1969 to 2026+ across 4 exploration eras.
@@ -85,7 +85,7 @@ An interactive, scientifically verified digital space museum created for the **N
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/space-heritage.git
+git clone https://github.com/irfanp70/space-heritage.git
 
 # Enter project directory
 cd space-heritage
