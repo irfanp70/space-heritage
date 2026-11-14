@@ -148,23 +148,42 @@ export const Hero: React.FC<HeroProps> = ({ onSelectDestination }) => {
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20">
-      {/* Canvas Starfield */}
-      <canvas 
-        ref={canvasRef} 
-        className="absolute inset-0 z-0 pointer-events-none"
+      {/* Full-width Moon & Mars Hero Background */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center pointer-events-none transition-all duration-1000 scale-[1.01]"
+        style={{
+          backgroundImage: "url('/hero-moon-mars.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+        aria-hidden="true"
       />
 
-      {/* Atmospheric Background Gradients */}
-      <div className="absolute inset-0 bg-radial from-slate-900/40 via-[#030712]/90 to-[#030712] z-0 pointer-events-none"></div>
+      {/* Subtle Cinematic Dark Overlays for Maximum Typography Readability */}
+      {/* Vertical blend: deep top navbar fade & bottom fade into museum section */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#030712]/85 via-transparent to-[#030712] pointer-events-none" />
 
-      {/* Dual Planetary Glow Elements */}
+      {/* Central focal darkener: preserves crisp visibility of Moon on left & Mars on right while providing contrast for center text */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-[#030712]/75 to-transparent pointer-events-none" />
+
+      {/* Subtle ambient tint */}
+      <div className="absolute inset-0 z-0 bg-[#030712]/30 pointer-events-none" />
+
+      {/* Canvas Starfield with shooting meteors (layered subtly over space) */}
+      <canvas 
+        ref={canvasRef} 
+        className="absolute inset-0 z-0 pointer-events-none opacity-60 mix-blend-screen"
+      />
+
+      {/* Dual Planetary Glow Elements (Moon cyan glow on left, Mars amber/orange glow on right) */}
       <div 
-        className={`absolute -top-24 -left-24 w-96 h-96 rounded-full bg-cyan-600/15 blur-[120px] transition-opacity duration-700 pointer-events-none ${
+        className={`absolute top-1/4 -left-16 w-80 h-80 rounded-full bg-cyan-400/20 blur-[100px] transition-opacity duration-700 pointer-events-none ${
           activePlanet === 'Mars' ? 'opacity-20' : 'opacity-100'
         }`}
       />
       <div 
-        className={`absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-orange-600/15 blur-[120px] transition-opacity duration-700 pointer-events-none ${
+        className={`absolute top-1/4 -right-16 w-80 h-80 rounded-full bg-orange-500/25 blur-[100px] transition-opacity duration-700 pointer-events-none ${
           activePlanet === 'Moon' ? 'opacity-20' : 'opacity-100'
         }`}
       />
