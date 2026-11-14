@@ -19,6 +19,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [selectedDestinationFilter, setSelectedDestinationFilter] = useState<'Moon' | 'Mars' | 'All'>('All');
   const [targetMachineForVoice, setTargetMachineForVoice] = useState<string | undefined>(undefined);
+  const [selectedMuseumMachineId, setSelectedMuseumMachineId] = useState<string | null>(null);
 
   // IntersectionObserver to highlight active navigation link
   useEffect(() => {
@@ -68,6 +69,7 @@ export default function App() {
   };
 
   const handleSelectFromMap = (machineId: string) => {
+    setSelectedMuseumMachineId(machineId);
     const element = document.getElementById('museum');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -75,6 +77,7 @@ export default function App() {
   };
 
   const handleSelectFromTimeline = (machineId: string) => {
+    setSelectedMuseumMachineId(machineId);
     const element = document.getElementById('museum');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -83,6 +86,7 @@ export default function App() {
 
   const handleSearchSelectItem = (type: 'museum' | 'apollo' | 'update' | 'story', id: string) => {
     if (type === 'museum') {
+      setSelectedMuseumMachineId(id);
       const el = document.getElementById('museum');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     } else if (type === 'apollo') {
@@ -116,6 +120,8 @@ export default function App() {
         <MuseumSection 
           selectedDestinationFilter={selectedDestinationFilter}
           onOpenMachineVoice={handleOpenMachineVoice}
+          selectedMachineId={selectedMuseumMachineId}
+          onClearSelectedMachine={() => setSelectedMuseumMachineId(null)}
         />
 
         {/* 2. Interactive Moon and Mars Map */}

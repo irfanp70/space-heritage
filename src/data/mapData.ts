@@ -105,7 +105,7 @@ export const MOON_LANDING_SITES: MapLandingSite[] = [
     country: 'United States',
     agency: 'NASA',
     status: 'Silent / Preserved',
-    briefFact: 'Explored impact breccias; deployed Far UV lunar astronomical observatory.',
+    briefFact: 'Explored Descartes Highlands breccias; John Young and Charlie Duke drove LRV-002 for 26.6 km and operated the Far UV lunar astronomical camera/spectrograph.',
     imageUrl: 'https://images-assets.nasa.gov/image/as16-113-18339/as16-113-18339~medium.jpg'
   },
   {
@@ -123,25 +123,25 @@ export const MOON_LANDING_SITES: MapLandingSite[] = [
     country: 'United States',
     agency: 'NASA',
     status: 'Silent / Preserved',
-    briefFact: 'Final Apollo surface mission; geologist Harrison Schmitt found orange volcanic glass.',
+    briefFact: 'Final Apollo surface mission; geologist Harrison Schmitt found orange volcanic glass; LRV-003 completed record 35.7 km traverse.',
     imageUrl: 'https://images-assets.nasa.gov/image/as17-140-21497/as17-140-21497~medium.jpg'
   },
   {
-    id: 'alsep-central-site',
-    name: 'Apollo 11 ALSEP & LRRR Stations',
-    machineId: 'apollo-11-alsep',
+    id: 'apollo-11-easep-site',
+    name: 'Apollo 11 EASEP & Laser Retroreflector',
+    machineId: 'apollo-11-easep',
     destination: 'Moon',
     type: 'Instrument',
     lat: 0.6734,
     lng: 23.4731,
     latStr: '0.6734° N',
     lngStr: '23.4731° E',
-    landmark: 'Tranquility Base, Moon',
+    landmark: 'Tranquility Base, Mare Tranquillitatis',
     year: 1969,
     country: 'United States',
     agency: 'NASA',
     status: 'Active',
-    briefFact: 'Quartz retroreflectors still return laser pulses from Earth 55+ years later without electric power.',
+    briefFact: 'Early Apollo Scientific Experiments Package (EASEP). The passive quartz corner-cube retroreflector array continues to reflect laser pulses from Earth observatories after 57+ years.',
     imageUrl: 'https://images-assets.nasa.gov/image/as11-40-5948/as11-40-5948~medium.jpg'
   }
 ];

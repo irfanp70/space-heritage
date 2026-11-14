@@ -148,20 +148,20 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
     audioQuoteMalayalam: "മറ്റൊരു ലോകത്ത് മനുഷ്യൻ ഓടിച്ച ആദ്യത്തെ വാഹനമായിരുന്നു ഞാൻ. ഇന്ന് ഹാഡ്‌ലി റിഷിന്റെ വക്കിൽ, എൻ്റെ വയർ മെഷ് ചക്രങ്ങൾ കറുത്ത ആകാശത്തിന് കീഴിൽ ശാന്തമായി വിശ്രമിക്കുന്നു, വീണ്ടും മനുഷ്യൻ്റെ കാലൊച്ച കേൾക്കാൻ കാത്തിരിക്കുന്നു."
   },
 
-  // 3. Apollo 11 ALSEP / EASEP equipment
+  // 3. Apollo 11 EASEP equipment
   {
-    id: 'apollo-11-alsep',
-    name: 'Apollo 11 ALSEP / EASEP (Passive Seismometer & Laser Retroreflector)',
-    shortName: 'Apollo 11 ALSEP & LRRR',
+    id: 'apollo-11-easep',
+    name: 'Apollo 11 Early Apollo Scientific Experiments Package (EASEP & LRRR)',
+    shortName: 'Apollo 11 EASEP & Laser Retroreflector',
     destination: 'Moon',
     category: 'Scientific Instrument',
     mission: 'Apollo 11',
     launchYear: 1969,
     landingYear: 1969,
-    lastContact: 'Active today via laser reflection (LRRR: 57+ years operational)',
+    lastContact: 'Active today via passive laser reflection (LRRR: 57+ years operational)',
     imageUrl: 'https://images-assets.nasa.gov/image/as11-40-5948/as11-40-5948~medium.jpg',
     imageCredit: 'NASA / Neil Armstrong (Apollo 11 - AS11-40-5948)',
-    nasaCatalogId: '1969-059D & 1969-059E',
+    nasaCatalogId: '1969-059D (PSEP) & 1969-059E (LRRR)',
     coordinates: {
       latitude: '0.6734° N',
       longitude: '23.4731° E',
@@ -169,19 +169,19 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       latNum: 0.6734,
       lngNum: 23.4731
     },
-    purpose: 'To collect long-term scientific geophysical data directly from the lunar surface and deploy the first passive optical retroreflector to measure Earth-Moon orbital dynamics.',
+    purpose: 'To deploy humanity\'s first extraterrestrial geophysical science station (EASEP), consisting of the Passive Seismic Experiment Package (PSEP) and the passive optical Laser Ranging Retroreflector (LRRR).',
     scientificAchievements: [
-      'Deployed by Buzz Aldrin on July 20, 1969; recorded the first moonquakes and astronaut footstep reverberations.',
-      'The 100-prism Laser Ranging Retroreflector (LRRR) requires ZERO electrical power and continues to bounce laser pulses from Earth observatories today.',
-      'Validated Einstein\'s General Theory of Relativity and verified that the Moon is spiraling away from Earth at 3.8 cm per year.'
+      'Deployed by Buzz Aldrin on July 20, 1969; recorded the first extraterrestrial moonquakes and astronaut footstep reverberations.',
+      'The 100-prism Laser Ranging Retroreflector (LRRR) requires zero electrical power and continues to bounce laser pulses from Earth observatories today (57+ years operational).',
+      'Validated Einstein\'s General Theory of Relativity, mapped lunar core fluid boundaries, and verified that the Moon is spiraling away from Earth at 3.8 cm per year.'
     ],
-    whyItRemains: 'Designed strictly as a permanent stationary surface geophysical station. While the solar-powered seismic transmitter operated for 21 days until lunar night freezing, the passive optical quartz retroreflector remains 100% active forever.',
-    lastKnownStatus: 'The quartz retroreflector array is actively pinged by McDonald Observatory (Texas) and Observatoire de la Côte d\'Azur (France) with millimeter accuracy.',
+    whyItRemains: 'Designed strictly as a permanent surface geophysical station. While the solar-powered passive seismometer ceased transmission after 21 days due to the extreme cold of lunar night, the passive optical quartz retroreflector requires zero electrical power and continues to return laser signals to Earth observatories today, although micrometeoroid erosion and lunar dust accumulation slowly degrade its optical efficiency over geological time.',
+    lastKnownStatus: 'The quartz corner-cube retroreflector array is still actively pinged by McDonald Observatory (Texas) and Observatoire de la Côte d\'Azur (France), measuring the Earth-Moon distance with sub-centimeter precision after more than 57 years.',
     hardwareSpecs: {
       mass: 'EASEP total: 48 kg (LRRR prism array: 15.4 kg)',
-      powerSource: 'Passive optical quartz corner-cubes (Zero power required)',
+      powerSource: 'Passive optical quartz corner-cubes (Zero electrical power required)',
       dimensions: '0.46 m × 0.46 m × 0.2 m',
-      operationalDuration: 'Continuous operation from July 1969 to present (57+ years)'
+      operationalDuration: 'Continuous passive operation from July 1969 to present (57+ years)'
     },
     verifiedReferences: [
       {
@@ -192,6 +192,11 @@ export const MUSEUM_ITEMS: SpaceEquipment[] = [
       {
         title: 'NSSDCA Master Catalog: Apollo 11 Laser Ranging Retroreflector',
         url: 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059E',
+        archiveSource: 'NASA Goddard'
+      },
+      {
+        title: 'NSSDCA Master Catalog: Apollo 11 Passive Seismic Experiment',
+        url: 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059D',
         archiveSource: 'NASA Goddard'
       }
     ],

@@ -45,7 +45,7 @@ export const OFFICIAL_DATA_SOURCES: ReferenceSource[] = [
     category: 'Photographic Archive',
     organization: 'Arizona State University / NASA GSFC',
     url: 'https://www.lroc.asu.edu/',
-    description: 'Sub-meter orbital verification imagery of Apollo landing sites, Lunar Module descent stages, rover tracks, and ALSEP instruments from lunar orbit.',
+    description: 'Sub-meter orbital verification imagery of Apollo landing sites, Lunar Module descent stages, rover tracks, and EASEP / ALSEP instruments from lunar orbit.',
     datasetOrIdentifier: 'LROC Narrow Angle Camera (NAC) M175124932LR & M168000580LR'
   },
   {

@@ -43,14 +43,19 @@ export const APOLLO_MISSIONS: ApolloMission[] = [
         status: 'Intact at Tranquility Base'
       },
       {
+        name: 'Early Apollo Scientific Experiments Package (EASEP)',
+        description: 'First lunar surface science package, deployed by Buzz Aldrin. Contained the PSEP solar seismometer and the passive LRRR optical array.',
+        status: 'PSEP ceased Aug 1969; LRRR remains active via laser reflection'
+      },
+      {
         name: 'Laser Ranging Retroreflector (LRRR)',
-        description: 'Array of 100 fused silica corner-cube prisms that bounce laser pulses back to Earth.',
-        status: 'Operational to this day (57+ years)'
+        description: 'Passive array of 100 fused silica corner-cube prisms requiring zero electrical power; continues to reflect Earth lasers 57+ years later.',
+        status: 'Actively pinged today from Earth observatories'
       },
       {
         name: 'Passive Seismic Experiment Package (PSEP)',
-        description: 'Early solar-powered seismometer that recorded first extraterrestrial tremors.',
-        status: 'Ceased transmission Aug 1969'
+        description: 'Early solar-powered seismometer that recorded first extraterrestrial moonquakes and astronaut footstep vibrations.',
+        status: 'Ceased transmission Aug 1969 after 21 days'
       },
       {
         name: 'Solar Wind Composition Experiment',

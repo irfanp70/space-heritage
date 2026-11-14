@@ -51,6 +51,7 @@ export const TIMELINE_MILESTONES: TimelineMilestone[] = [
     destination: 'Moon',
     era: 'Apollo Era',
     description: 'Gene Cernan and Harrison Schmitt conclude the Apollo program in Taurus-Littrow. LRV-003 is parked at the VIP site to televise the final ascent liftoff.',
+    machineId: 'apollo-17-lrv',
     significance: 'End of 20th-century crewed lunar exploration; 382 kg of lunar rocks cataloged.',
     iconType: 'flag'
   },
@@ -105,6 +106,7 @@ export const TIMELINE_MILESTONES: TimelineMilestone[] = [
     destination: 'Mars',
     era: 'Rover Renaissance',
     description: 'A 1-ton nuclear-powered rover lands via a rocket-powered sky crane, discovering ancient habitable freshwater lakes on Mount Sharp.',
+    machineId: 'curiosity-msl',
     significance: 'Broke open long-duration nuclear rover operations on Mars (active for over 13 years).',
     iconType: 'rover'
   },
@@ -126,6 +128,7 @@ export const TIMELINE_MILESTONES: TimelineMilestone[] = [
     destination: 'Mars',
     era: 'Modern & Artemis',
     description: 'Perseverance lands in Jezero Crater to cache core rock samples, accompanied by Ingenuity, the first powered aircraft on another planet (72 flights).',
+    machineId: 'perseverance-mars2020',
     significance: 'First extraterrestrial aerial flight and first deliberate sample depot caching for future return.',
     iconType: 'rover'
   },
@@ -141,12 +144,32 @@ export const TIMELINE_MILESTONES: TimelineMilestone[] = [
   },
   {
     year: 2026,
-    dateStr: '2026',
-    title: 'Artemis Program: Returning Humanity to the Moon',
+    dateStr: 'April 2026',
+    title: 'Artemis II: Crewed Lunar Flyby Completed',
     destination: 'Moon',
     era: 'Modern & Artemis',
-    description: 'Artemis II prepares to launch four astronauts on a lunar flyby, paving the way for Artemis III to establish humanity\'s sustainable presence at the Lunar South Pole.',
-    significance: 'The dawn of permanent, sustainable lunar bases and stewardship of lunar historical sites.',
+    description: 'NASA and CSA successfully completed humanity\'s first crewed lunar mission in over 50 years, flying four astronauts around the Moon aboard Orion.',
+    significance: 'Flight-proven human deep-space life support and SLS launch architecture.',
     iconType: 'rocket'
+  },
+  {
+    year: 2027,
+    dateStr: 'Planned 2027',
+    title: 'Artemis III: Low-Earth-Orbit Demonstration Mission',
+    destination: 'Moon',
+    era: 'Modern & Artemis',
+    description: 'Planned flight to demonstrate rendezvous, docking, and life-support architecture in low Earth orbit ahead of lunar surface landing.',
+    significance: 'Crucial orbital validation of Human Landing System (HLS) and spacesuit interfaces.',
+    iconType: 'rocket'
+  },
+  {
+    year: 2028,
+    dateStr: 'Targeted Early 2028',
+    title: 'Artemis IV: Targeted First Crewed Lunar Landing',
+    destination: 'Moon',
+    era: 'Modern & Artemis',
+    description: 'NASA\'s currently targeted first crewed lunar landing of the Artemis campaign, returning astronauts to touch down at the Lunar South Pole.',
+    significance: 'First human surface exploration of permanently shadowed polar ice craters.',
+    iconType: 'flag'
   }
 ];

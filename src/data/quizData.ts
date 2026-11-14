@@ -32,12 +32,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       "Lunar Roving Vehicle TV camera",
       "SNAP-27 Radioisotope Thermoelectric Generator",
       "Lunar Laser Ranging Retroreflector (LRRR)",
-      "Apollo Passive Seismic Experiment"
+      "Apollo 11 Passive Seismic Experiment (PSEP / EASEP)"
     ],
     correctIndex: 2,
-    explanation: "The Laser Ranging Retroreflectors (LRRR) left by Apollo 11, 14, and 15 use corner-cube optical quartz prisms to reflect laser beams fired from Earth back to their source. They measure the Moon's orbital drift (3.8 cm/year) with millimeter accuracy.",
-    historicalContext: "This is the only Apollo experiment still collecting fresh scientific data 50+ years after astronauts left the lunar surface.",
-    relatedMachineId: 'alsep-instrument-suite',
+    explanation: "The passive Laser Ranging Retroreflectors (LRRR) left by Apollo 11 (as part of EASEP), Apollo 14, and Apollo 15 use fused silica corner-cube optical prisms that reflect laser pulses back to Earth without requiring electrical power. They continue to measure the Moon's distance and orbital drift (3.8 cm/year) with millimeter accuracy today.",
+    historicalContext: "This is the only Apollo surface hardware still returning ongoing scientific measurements over 57 years after astronauts walked on the Moon.",
+    relatedMachineId: 'apollo-11-easep',
     difficulty: 'Beginner'
   },
   {

@@ -23,11 +23,15 @@ import { SpaceImage } from './SpaceImage';
 interface MuseumSectionProps {
   selectedDestinationFilter?: 'Moon' | 'Mars' | 'All';
   onOpenMachineVoice?: (machineId: string) => void;
+  selectedMachineId?: string | null;
+  onClearSelectedMachine?: () => void;
 }
 
 export const MuseumSection: React.FC<MuseumSectionProps> = ({ 
   selectedDestinationFilter = 'All',
-  onOpenMachineVoice 
+  onOpenMachineVoice,
+  selectedMachineId,
+  onClearSelectedMachine
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDestination, setSelectedDestination] = useState<'All' | 'Moon' | 'Mars'>(selectedDestinationFilter);
@@ -49,6 +53,22 @@ export const MuseumSection: React.FC<MuseumSectionProps> = ({
       setSelectedDestination(selectedDestinationFilter);
     }
   }, [selectedDestinationFilter]);
+
+  // Open modal when external machine is selected from map, timeline, or search
+  React.useEffect(() => {
+    if (selectedMachineId) {
+      const match = MUSEUM_ITEMS.find(m => m.id === selectedMachineId);
+      if (match) {
+        setActiveModalItem(match);
+        if (selectedDestination !== 'All' && selectedDestination !== match.destination) {
+          setSelectedDestination('All');
+        }
+        if (selectedCategory !== 'All' && selectedCategory !== match.category) {
+          setSelectedCategory('All');
+        }
+      }
+    }
+  }, [selectedMachineId]);
 
   const toggleBookmark = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -88,6 +108,7 @@ export const MuseumSection: React.FC<MuseumSectionProps> = ({
     stopNarration();
     setIsPlayingAudio(false);
     setActiveModalItem(null);
+    onClearSelectedMachine?.();
   };
 
   const handlePlayVoice = (text: string) => {
@@ -300,7 +321,10 @@ export const MuseumSection: React.FC<MuseumSectionProps> = ({
 
       {/* Detailed Modal Window */}
       {activeModalItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl animate-in fade-in duration-200">
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl animate-in fade-in duration-200"
+          onClick={handleCloseModal}
+        >
           <div 
             className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-slate-900 border border-cyan-500/30 shadow-2xl shadow-cyan-950/60 p-6 sm:p-8 space-y-6"
             onClick={(e) => e.stopPropagation()}

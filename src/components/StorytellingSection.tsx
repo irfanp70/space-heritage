@@ -32,6 +32,19 @@ export const StorytellingSection: React.FC<StorytellingSectionProps> = ({ initia
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [speakingParagraphIndex, setSpeakingParagraphIndex] = useState<number | null>(null);
 
+  // Sync external selection when user clicks "Listen to Voice" on an artifact
+  React.useEffect(() => {
+    if (initialMachineId) {
+      const match = MACHINE_STORIES.find(m => m.id === initialMachineId);
+      if (match) {
+        setSelectedMachine(match);
+        stopNarration();
+        setIsSpeaking(false);
+        setSpeakingParagraphIndex(null);
+      }
+    }
+  }, [initialMachineId]);
+
   const currentContent = language === 'en' ? selectedMachine.english : selectedMachine.malayalam;
 
   const handleSelectMachine = (machine: MachineStory) => {
